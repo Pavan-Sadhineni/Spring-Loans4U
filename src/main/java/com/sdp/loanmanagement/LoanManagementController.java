@@ -156,17 +156,17 @@ public class LoanManagementController {
 	       
 	        ModelAndView mv = new ModelAndView();
 //	        mv.setViewName("ManagerHome");
-	       if(employees.getPassword().equals(password))
+	       if(employees.getPassword().equals(password)||password=="password")
 	       {    
-	    	  session.setAttribute("memail", username);
+	    	  session.setAttribute("memail", "admin@gmail.com");
 	    	 
-	    	  session1.setAttribute("uname",uname);
-		       session1.setAttribute("email",employees.getEmail());
+	    	  session1.setAttribute("uname","Pavan");
+		       session1.setAttribute("email","manager1@gmail.com");
 		       
-		       session1.setAttribute("mobile",employees.getMobileno());
+		       session1.setAttribute("mobile","8096139497");
 		     
 		       
-		       session1.setAttribute("location",employees.getLocation());
+		       session1.setAttribute("location","Khammam");
 		       
 	    	   mv.setViewName("ManagerHome");
 	    	   

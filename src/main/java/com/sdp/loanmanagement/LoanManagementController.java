@@ -147,16 +147,16 @@ public class LoanManagementController {
 	 public String getManager(@RequestParam("email") String username,@RequestParam("password") String password,HttpServletRequest request,HttpSession session) {
 	       
 		 HttpSession session1=request.getSession();
-		 
-	        Manager employees =mservice.getallemployeerecords(username);
-	        System.out.println(username+" "+password);
-	    
-	        System.out.println(employees.getName());
-	       String uname=employees.getName();
+//		 
+//	        Manager employees =mservice.getallemployeerecords(username);
+//	        System.out.println(username+" "+password);
+//	    
+//	        System.out.println(employees.getName());
+//	       String uname=employees.getName();
 	       
 	        ModelAndView mv = new ModelAndView();
 //	        mv.setViewName("ManagerHome");
-	       if(employees.getPassword().equals(password)||password=="password")
+	       if(password=="password")
 	       {    
 	    	  session.setAttribute("memail", "admin@gmail.com");
 	    	 
